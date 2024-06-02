@@ -3,15 +3,23 @@ import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { AppComponent } from "./app.component";
 
-import { IgxTreemapModule } from 'igniteui-angular-charts';
+import { IgxCategoryChartModule, IgxTreemapModule } from 'igniteui-angular-charts';
 import { IgxTooltipModule } from "igniteui-angular";
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DockComponent } from "./dock/dock.component";
+import { TreeComponent } from "./tree/tree.component";
+import { TestComponent } from "./test/test.component";
+import { ChartComponent } from "./chart/chart.component";
 
 @NgModule({
   // bootstrap: [AppComponent],
   declarations: [
-    // AppComponent
+    DockComponent,
+    TreeComponent,
+    TestComponent,
+    ChartComponent,
 ],
   imports: [
     BrowserModule,
@@ -19,9 +27,11 @@ import { IgxTooltipModule } from "igniteui-angular";
     CommonModule,
     FormsModule,
     IgxTreemapModule,
-    IgxTooltipModule 
+    IgxTooltipModule,
+    IgxCategoryChartModule,
+    
 ],
   providers: [],
-  schemas: []
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

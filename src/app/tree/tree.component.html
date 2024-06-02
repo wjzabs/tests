@@ -1,12 +1,14 @@
-<div class="container vertical sample">
+ 
+  <div class="container vertical sample">
+    <button (click)="populate()">
+      Refresh Data
+    </button>
+
     <div class="legend-title">
         Comparing Population of Countries
     </div>
-    <button (click)="populate()">
-      populate with data
-    </button>
-    <!-- <div class="container fill"> -->
-        <igx-treemap
+    <div class="container fill" style="height:500px; width:500px">
+        <igx-treemap  style="height:500px; width:500px"
         name="treemap"
         #treemap
         [dataSource]="countyHierarchicalData"
@@ -29,5 +31,5 @@
         strokeThickness="1">
         </igx-treemap>
     </div>
-  <!-- </div> -->
+  </div>
   

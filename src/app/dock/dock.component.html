@@ -1,0 +1,74 @@
+<igc-dockmanager [layout]=layout style="height: 600px;">
+
+    <div slot="accountHeader" class="header">
+        <span>ACCOUNTS</span>
+        <menu-component></menu-component>
+        <app-chart style="height: 500px; width: 500px;"></app-chart>
+      </div>
+      <div slot="accountFloatingHeader" class="floatingHeader">
+        <span>ACCOUNTS</span>
+        <button id="close" class="closeButton">
+          <igc-icon-component name="close" />
+        </button>
+      </div>
+      <div class="dockManagerFull" slot="content1">
+        <igc-card style="overflow-y: auto;" elevated>
+          <igc-card-content>
+            <div class="account-content">
+              <div>
+                <h1>$2980.00</h1>
+                <span style="font-size: 12pt;">United States Dollar</span>
+              </div>
+
+              <igc-avatar style="margin: 0.5rem;" size="medium" src="https://static.infragistics.com/xplatform/images/flags/USA.png"
+                shape="rounded">USA</igc-avatar>
+            </div>
+          </igc-card-content>
+
+          <igc-card-actions>
+            <div>
+                <button (click)="test()">
+                    Test Button
+                  </button>
+              <igc-button variant="fab" size="medium" slot="start">
+                Add Money
+              </igc-button>
+              <igc-button variant="fab" size="medium" slot="start">
+                Send
+              </igc-button>
+
+              <app-catgy></app-catgy>
+            </div>
+          </igc-card-actions>
+        </igc-card>
+      </div>
+
+
+    <!-- <div slot="content1" class="dockManagerContent">1<app-catgy></app-catgy></div> -->
+    
+    <div slot="content2" class="dockManagerContent">Content 2</div>
+    <div slot="content3" class="dockManagerContent">3
+        <app-chart style="height: 100%; width: 100%;">
+
+        </app-chart></div>
+    <div slot="content4" class="dockManagerContent">Content 4</div>
+    <div slot="content5" class="dockManagerContent">5<app-catgy></app-catgy></div>
+    <div slot="content6" class="dockManagerContent">6
+        <app-input style="height: 500px; width: 500px;">
+
+        </app-input>
+    </div>
+    <div slot="content7" class="dockManagerContent">Content 7</div>
+    <div slot="content8" class="dockManagerContent">Content 8</div>
+    <div slot="content9" class="dockManagerContent">Content 9</div>
+    <div slot="content10" class="dockManagerContent">Content 10</div>
+    <div slot="content11" class="dockManagerContent">Content 11
+        <app-tree style="height: 500px; width: 500px;">
+
+        </app-tree>
+    </div>
+    <div slot="content12" class="dockManagerContent">Content 12
+        <app-test style="height: 500px; width: 500px;"></app-test>
+    </div>
+</igc-dockmanager>
+
